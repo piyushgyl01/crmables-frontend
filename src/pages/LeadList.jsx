@@ -126,6 +126,7 @@ export default function LeadList() {
             />
           </span>
         </div>
+        {/* LEADS TABLE VIEW */}
         {leadsLoading && <Loading />}
         {leadError && <Error />}
         {processedData && (
@@ -142,7 +143,7 @@ export default function LeadList() {
             </thead>
             <tbody>
               {processedData?.map((agent) => (
-                <tr>
+                <tr key={agent._id}>
                   <td>{agent.name}</td>
                   <td>{agent.source}</td>
                   <td>{agent.salesAgent.name}</td>
