@@ -41,12 +41,12 @@ export default function Dashboard() {
   return (
     <>
       {/* LEAD VIEW */}
-      <div className="container-fluid my-4">
+      <div className="container-fluid my-5">
         <div className="row mb-3 align-items-center">
           <div className="col-md-6">
             <h1 className="h2 mb-0">Lead Status Overview</h1>
           </div>
-          <div className="col-md-6 ">
+          <div className="col-md-6 mb-4">
             <SelectFilter
               label="Filter By Status"
               options={statusOptions}
