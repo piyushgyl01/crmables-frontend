@@ -113,7 +113,7 @@ export default function LeadList() {
                 label="Filter By Priority"
                 options={priorityOptions}
                 onFilterChange={handlePriorityChange}
-              />{" "}
+              />
             </span>
           )}
           <span className="col-md-3 my-4">

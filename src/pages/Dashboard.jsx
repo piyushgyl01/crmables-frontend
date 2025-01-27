@@ -60,7 +60,7 @@ export default function Dashboard() {
           <>
             <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
               {filteredData.slice(0, visibleLeads).map((lead) => (
-                <div key={lead.id} className="col">
+                <div key={lead._id} className="col">
                   <LeadView
                     name={lead.name}
                     source={lead.source}
