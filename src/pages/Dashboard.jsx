@@ -56,7 +56,7 @@ export default function Dashboard() {
         </div>
         {loading && <Loading />}
         {error && <Error />}
-        {filteredData && (
+        {filteredData?.length > 0 ? (
           <>
             <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
               {filteredData.slice(0, visibleLeads).map((lead) => (
@@ -81,6 +81,8 @@ export default function Dashboard() {
               </div>
             )}
           </>
+        ) : (
+          <p>No Leads Found</p>
         )}
       </div>
       {/* LEAD STATUS OVERVIEW VIEW */}

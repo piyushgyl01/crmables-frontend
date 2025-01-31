@@ -14,7 +14,7 @@ export default function LeadList() {
   const [agent, setAgent] = React.useState("All");
   const [priority, setPriority] = React.useState("All");
   const [prioritySort, setPrioritySort] = React.useState("");
-  const [timeRange, setTimeRange] = React.useState([0, 100]);
+  const [timeRange, setTimeRange] = React.useState([0, 200]);
   const [sortByPriority, setSortByPriority] = React.useState(false);
 
   //LEADS FETCH
