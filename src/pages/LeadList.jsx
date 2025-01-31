@@ -144,7 +144,15 @@ export default function LeadList() {
             <tbody>
               {processedData?.map((agent) => (
                 <tr key={agent._id}>
-                  <td>{agent.name}</td>
+                  <td>
+                    <Link
+                      style={{ cursor: "pointer" }}
+                      className="text-dark"
+                      to={`/lead-list/${agent.name}/${agent._id}`}
+                    >
+                      {agent.name}
+                    </Link>
+                  </td>
                   <td>{agent.source}</td>
                   <td>{agent.salesAgent.name}</td>
                   <td>{agent.status}</td>

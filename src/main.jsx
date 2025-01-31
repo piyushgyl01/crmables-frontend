@@ -37,7 +37,7 @@ const router = createBrowserRouter([
         element: <LeadByStatus />,
       },
       {
-        path: "/lead-details/:lead-name/:leadID",
+        path: "/lead-list/:lead-name/:leadID",
         element: <LeadDetails />,
       },
       {
