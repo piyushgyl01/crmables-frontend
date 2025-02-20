@@ -79,14 +79,12 @@ function ResponsiveDrawer(props) {
       <IconButton
         className=" ms-4 p-3"
         onClick={handleDrawerClose}
-        sx={{ display: { sm: "none" } }} 
+        sx={{ display: { sm: "none" } }}
         style={{ color: "#000000" }}
       >
         <CloseIcon />
       </IconButton>
-      <Toolbar
-        sx={{ display: { xs: "none", sm: "block" } }}
-      />
+      <Toolbar sx={{ display: { xs: "none", sm: "block" } }} />
 
       <Divider />
       <List className="px-4">
@@ -161,7 +159,7 @@ function ResponsiveDrawer(props) {
             onTransitionEnd={handleDrawerTransitionEnd}
             onClose={handleDrawerClose}
             ModalProps={{
-              keepMounted: true, 
+              keepMounted: true,
             }}
             sx={{
               display: { xs: "block", sm: "none" },

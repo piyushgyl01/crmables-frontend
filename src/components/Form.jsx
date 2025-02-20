@@ -14,7 +14,7 @@ function Form({ lead, onSave, type = "edit" }) {
   });
   const { statusOptions, priorityOptions, sources } = useSelectOptions();
 
-  const salesAgent = useSalesAgent()
+  const salesAgent = useSalesAgent();
 
   useEffect(() => {
     if (type === "edit" && lead) {

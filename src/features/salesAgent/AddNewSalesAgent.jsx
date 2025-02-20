@@ -11,9 +11,7 @@ export default function AddNewSalesAgent() {
       <div className="card-header bg-white py-3">
         <h2 className="h5 mb-0 text-primary">Add New Sales Agent</h2>
       </div>
-
       <div className="card-body p-4">
-        {/* Basic Information Section */}
         <div className="mb-4">
           <h6 className="text-muted text-uppercase small mb-3">
             Agent Information
@@ -60,8 +58,6 @@ export default function AddNewSalesAgent() {
             </div>
           </div>
         </div>
-
-        {/* Action Buttons */}
         <div className="d-grid gap-2 d-md-flex justify-content-md-end mt-4">
           <button
             className="btn btn-primary px-4"
