@@ -264,15 +264,16 @@ export const selectFilteredLeads = createSelector(
     });
 
     if (filters.prioritySort) {
-      const priorityOrder = { High: 3, Medium: 2, Low: 1 };
-      result = [...result].sort((a, b) => {
-        if (filters.prioritySort === "highToLow") {
-          return priorityOrder[b.priority] - priorityOrder[a.priority];
-        } else {
-          return priorityOrder[a.priority] - priorityOrder[b.priority];
-        }
-      });
-    }
+        const priorityOrder = { High: 3, Medium: 2, Low: 1 };
+        result = [...result].sort((a, b) => {
+          const aValue = priorityOrder[a.priority] || 0;
+          const bValue = priorityOrder[b.priority] || 0;
+          return filters.prioritySort === "highToLow" 
+            ? bValue - aValue 
+            : aValue - bValue;
+        });
+      }
+  
 
     return result;
   }

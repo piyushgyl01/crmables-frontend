@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.js";
 
 import ResponsiveDrawer from "./components/HeaderAndSidebar.jsx";
-import Dashboard from "./pages/Dashboard.jsx";
+import Dashboard from "./Dashboard.jsx";
 import AddNewLead from "./features/lead/AddNewLead.jsx";
 import AddNewSalesAgent from "./features/salesAgent/AddNewSalesAgent.jsx";
 import LeadByStatus from "./features/lead/LeadByStatus.jsx";

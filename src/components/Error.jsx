@@ -1,9 +1,9 @@
 import Alert from "@mui/material/Alert";
 
-export default function Error() {
+export default function Error({text}) {
   return (
     <Alert variant="outlined" severity="error">
-      Loading error
+      {text}
     </Alert>
   );
 }

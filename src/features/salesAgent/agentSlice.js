@@ -1,8 +1,4 @@
-import {
-  createSlice,
-  createAsyncThunk,
-  createSelector,
-} from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
 const BASE_URL = import.meta.env.VITE_API_URL;
@@ -25,7 +21,10 @@ export const postSalesAgent = createAsyncThunk(
   "salesAgent/postSalesAgent",
   async (salesAgentData) => {
     try {
-      const response = await axios.post(`${BASE_URL}/salesAgent`, salesAgentData);
+      const response = await axios.post(
+        `${BASE_URL}/salesAgent`,
+        salesAgentData
+      );
       return response.data;
     } catch (error) {
       console.error("Post Error: ", error);
@@ -42,7 +41,7 @@ export const salesAgentSlice = createSlice({
       fetchSalesAgentStatus: "idle",
       postSalesAgentStatus: "idle",
     },
-    error: null,  
+    error: null,
   },
   reducers: {},
   extraReducers: (builder) => {
