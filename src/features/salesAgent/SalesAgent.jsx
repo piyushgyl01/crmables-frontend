@@ -1,7 +1,7 @@
 import * as React from "react";
-import useFetch from "../useFetch";
-import Loading from "../components/Loading";
-import Error from "../components/Error";
+import useFetch from "../../useFetch";
+import Loading from "../../components/Loading";
+import Error from "../../components/Error";
 
 export default function SalesAgent() {
   //SALES AGENT FETCH

@@ -6,14 +6,18 @@ import "bootstrap/dist/js/bootstrap.js";
 
 import ResponsiveDrawer from "./components/HeaderAndSidebar.jsx";
 import Dashboard from "./pages/Dashboard.jsx";
-import AddNewLead from "./pages/AddNewLead.jsx";
-import AddNewSalesAgent from "./pages/AddNewSalesAgent.jsx";
-import LeadByStatus from "./pages/LeadByStatus.jsx";
-import LeadDetails from "./pages/LeadDetails.jsx";
-import LeadList from "./pages/LeadList.jsx";
-import Reports from "./pages/Reports.jsx";
-import SalesAgent from "./pages/SalesAgent.jsx";
-import SalesAgentView from "./pages/SalesAgentView.jsx";
+import AddNewLead from "./features/lead/AddNewLead.jsx";
+import AddNewSalesAgent from "./features/salesAgent/AddNewSalesAgent.jsx";
+import LeadByStatus from "./features/lead/LeadByStatus.jsx";
+import LeadList from "./features/lead/LeadList.jsx";
+import Reports from "./features/reports/Reports.jsx";
+import SalesAgent from "./features/salesAgent/SalesAgent.jsx";
+import SalesAgentView from "./features/salesAgent/SalesAgentView.jsx";
+
+import { Provider } from "react-redux";
+
+import store from "./app/store.js";
+import LeadDetails from "./features/lead/LeadDetails.jsx";
 
 const router = createBrowserRouter([
   {
@@ -62,6 +66,10 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <Provider store={store}>
+      <RouterProvider router={router}>
+        <Dashboard />
+      </RouterProvider>
+    </Provider>
   </StrictMode>
 );
