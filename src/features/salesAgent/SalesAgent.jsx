@@ -39,7 +39,7 @@ export default function SalesAgent() {
             </div>
           </div>
           <Link
-            to="/add-sales-agent"
+            to="/add-new-sales-agent"
             className="btn btn-primary d-flex align-items-center px-3"
           >
             Add New Agent
